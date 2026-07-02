@@ -4,7 +4,7 @@ const report = document.getElementById("downloadReport");
 
 button.addEventListener("click", loadEmployees);
 
-report.addEventListener("click",downloadReport)
+report.addEventListener("click", downloadReport)
 
 async function loadEmployees() {
 
@@ -20,10 +20,10 @@ async function loadEmployees() {
     );
 
     if (!response.ok) {
-    const error = await response.json();
-    alert(error.message);
-    return;
-   }
+        const error = await response.json();
+        alert(error.message);
+        return;
+    }
 
     const employees = await response.json();
     if (employees.length === 0) {
@@ -85,8 +85,8 @@ async function downloadReport() {
     }
 }
 
-function openDetails(id){
+function openDetails(id) {
 
-    window.location.href=`details.html?id=${id}`;
+    window.location.href = `details.html?id=${id}`;
 
 }
